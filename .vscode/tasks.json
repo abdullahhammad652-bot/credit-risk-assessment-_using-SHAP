@@ -1,0 +1,19 @@
+﻿{
+  "tasks": [
+    {
+      "label": "Install Python dependencies",
+      "type": "shell",
+      "command": "python -m pip install fastapi uvicorn pandas joblib scikit-learn pydantic",
+      "inAgents": true,
+      "runOptions": {
+        "runOn": "worktreeCreated"
+      }
+    },
+    {
+      "label": "Start FastAPI app",
+      "type": "shell",
+      "command": "python -m uvicorn main:app --reload",
+      "inAgents": true
+    }
+  ]
+}
